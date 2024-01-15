@@ -1,0 +1,26 @@
+.sideMenu {
+    position: static;
+    z-index: 10;
+    width: 15vw;
+    height: 100vh;
+    background-color: #260485;
+    color: #fff;
+    box-shadow: 4px 0px 6px 0px rgba(0,0,0,0.75);
+
+    .options {
+        
+        li {
+            
+            button {
+                font-family: 'PoppinsBold', sans-serif;
+                font-size: 22px;
+                width: 100%;
+                background-image: linear-gradient(to bottom, #350baa, #3209a3, #2f089c, #2d0695, #2a058e, #2a058e, #2a058e, #2a058e, #2d0695, #2f089c, #3209a3, #350baa);
+                color: #fff;
+                border: none;
+                padding: 20px 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
