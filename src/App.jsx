@@ -1,14 +1,9 @@
-import { SideMenu } from "./components/sideMenu/sideMenu"
-import { ToDoList } from "./components/toDoList/toDoList"
-import './app.scss'
+import { AppRoutes } from "./routes/routes"
 
 
 function App() {
     return (
-        <main className="app">
-            <SideMenu />
-            <ToDoList />    
-        </main>
+        <AppRoutes />
     )
 }
 

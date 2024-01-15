@@ -1,10 +1,14 @@
+import { ShoppingList } from '../shoppingList/shoppingList'
 import './toDoList.scss'
 
 
 const ToDoList = () => {
     return (
         <section className='todolist'>
-            <h1>Lista de Tarefa</h1>
+            <ShoppingList id={1} />
+            <ShoppingList id={2} />
+            <ShoppingList id={3} />
+            <ShoppingList id={4} />
         </section>
     )
 }
