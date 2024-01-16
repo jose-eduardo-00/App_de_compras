@@ -12,12 +12,6 @@ const SideMenu = () => {
                 <Link to={'/historic'}>
                     <li><button>Histórico</button></li>
                 </Link>
-                <Link to={'/createlist'}>
-                    <li><button>Criar Lista</button></li>
-                </Link>
-                <Link to={'/deletelist'}>
-                    <li><button>Apagar Lista</button></li>
-                </Link>
             </ul>
         </aside>
     )
