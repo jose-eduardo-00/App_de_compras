@@ -2,19 +2,29 @@ import { Link } from 'react-router-dom'
 import './shoppingList.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { getList } from '../../services/services'
 
 
-const ShoppingList = (id) => {
+const shoppingList = await getList()
+
+const ShoppingList = () => {
     return (
-        <Link to={`/list/${id.id}`}>
-            <section className="shopping-list">
-                <div className='infos'>
-                    <h1>Compras de (Mês da compra)</h1>
-                    <p>Data da criação da lista</p>
-                </div>
-                <FontAwesomeIcon icon={faTrash} className='trash' />
-            </section>
-        </Link>
+        shoppingList.map((e, index) => {
+            const listDate = new Date(e.creation_date)
+            const mes = listDate.getUTCMonth() + 1
+            const date = listDate.toLocaleDateString('pt-BR', { timeZone: 'UTC', });
+            return (
+                <Link key={index} to={`/list/${e.id}`}>
+                    <section className="shopping-list">
+                        <div className='infos'>
+                            <h1>Compras de {mes}</h1>
+                            <p>Data de criação {date}</p>
+                        </div>
+                        <FontAwesomeIcon icon={faTrash} className='trash' />
+                    </section>
+                </Link>
+            )
+        })
     )
 }
 

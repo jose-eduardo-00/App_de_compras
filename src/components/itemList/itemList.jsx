@@ -1,22 +1,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './itemList.scss'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { getItens } from '../../services/services'
+
+
+const itensList = await getItens()
 
 const ItemList = () => {
     return (
-        <main className="container-list">
-            <div className="item">
-                <h1>nome do item</h1>
-                <div className="value">
-                    <div className='input'>
-                        <label htmlFor="amount">Q:</label>
-                        <input type='number' placeholder='0' name='amount'></input>
+        itensList.map((e, index) => {
+            return (
+                <main className="container-list" key={index}>
+                    <div className="item">
+                        <h1>{e.name}</h1>
+                        <div className="value">
+                            <h1 className='amount'>Q: {e.amount}</h1>
+                            <h1>R$ {e.price}</h1>
+                            <FontAwesomeIcon icon={faTrash} className='trash' />
+                        </div>
                     </div>
-                    <h1>R$ 20,00</h1>
-                    <FontAwesomeIcon icon={faTrash} className='trash' />
-                </div>
-            </div>
-        </main>
+                </main>
+            )
+        })
     )
 }
 

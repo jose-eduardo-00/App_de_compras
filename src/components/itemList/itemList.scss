@@ -15,18 +15,11 @@
             justify-content: space-around;
             align-items: center;
 
-            .input {
+            .amount {
                 height: 100%;
-                width: 20%;
                 display: flex;
                 align-items: center;
                 gap: 10px;
-
-                input {
-                    min-height: 100%;
-                    width: 120%;
-                    text-align: center;
-                }
             }
 
             .trash {
