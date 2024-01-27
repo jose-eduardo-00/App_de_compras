@@ -3,6 +3,7 @@ import { ItemList } from '../../itemList/itemList'
 import { ButtonAdd } from '../../buttonAdd/buttonAdd'
 import './list.scss'
 import { cadastraIten } from './utils'
+import { AddIten } from '../../addIten/addIten'
 
 
 const List = () => {
@@ -21,6 +22,7 @@ const List = () => {
                     </div>
                 </div>
             </div>
+            <AddIten />
             <footer className="footer-list">
                 <h1>Total: Valor</h1>
             </footer>

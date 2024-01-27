@@ -13,5 +13,18 @@ async function getItens() {
     return await resposta.json()
 }
 
+function methodPost(url, body) {
+    let request = new XMLHttpRequest()
+    request.open("POST", url, true)
+    request.setRequestHeader("content-type", "application/json")
+    request.send(JSON.stringify(body))
+}
 
-export { baseUrl, getList, getItens }
+function methodDelete(url) {
+    let request = new XMLHttpRequest()
+    request.open("DELETE", url, true)
+    request.setRequestHeader("content-type", "application/json")
+    request.send()
+}
+
+export { baseUrl, getList, getItens, methodPost, methodDelete }

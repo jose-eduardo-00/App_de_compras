@@ -1,9 +1,9 @@
 import './buttonAdd.scss'
 
 
-const ButtonAdd = () => {
+const ButtonAdd = (e) => {
     return (
-        <button className="btn-add">+</button>
+        <button className="btn-add" id='add' onClick={e.event}>+</button>
     )
 }
 

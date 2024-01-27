@@ -1,6 +1,8 @@
 import { ButtonAdd } from '../buttonAdd/buttonAdd'
 import { ShoppingList } from '../shoppingList/shoppingList'
 import './toDoList.scss'
+import './utils.jsx'
+import { shoppingListAdd } from './utils.jsx'
 
 
 const ToDoList = () => {
@@ -8,7 +10,7 @@ const ToDoList = () => {
         <section className='todolist'>
             <ShoppingList />
             <div className='add'>
-                <ButtonAdd />
+                <ButtonAdd event={shoppingListAdd} />
             </div>
         </section>
     )

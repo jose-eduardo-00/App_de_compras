@@ -1,11 +1,4 @@
-import { baseUrl } from "../../../services/services"
-
-function fazPost(url, body) {
-    let request = new XMLHttpRequest()
-    request.open("POST", url, true)
-    request.setRequestHeader("content-type", "application/json")
-    request.send(JSON.stringify(body))
-}
+import { baseUrl, methodPost } from "../../../services/services"
 
 
 function cadastraIten() {
@@ -23,7 +16,7 @@ function cadastraIten() {
         "price": price
     }
 
-    fazPost(url, body)
+    methodPost(url, body)
 }
 
 export { cadastraIten }

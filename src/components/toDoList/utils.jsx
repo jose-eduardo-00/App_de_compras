@@ -1,12 +1,22 @@
+import { baseUrl, methodPost } from "../../services/services"
 
-const hoje = new Date()
-const mes = hoje.getMonth()
-const ano = hoje.getFullYear().toString().slice(-2)
 
-console.log(ano);
-
-if (mes === 0) {
-    console.log('Janeiro');
+function shoppingListAdd() {
+    if (confirm("Quer criar a Lista?")) {
+        event.preventDefault()
+        const hoje = new Date()
+        const dia = hoje.getUTCDate().toString().padStart(2, '0')
+        let mes = (hoje.getUTCMonth() + 1).toString().padStart(2, '0')
+        const ano = hoje.getFullYear()
+        let url = `${baseUrl}list`
+        let creationDate = `${ano}, ${mes}, ${dia}`
+        let body = {
+            "creation_date": creationDate
+        }
+        methodPost(url, body)
+    } else {
+        return 
+    }
 }
 
-// exemplo de como pegar o mes e o ano(com apenas os dois ultimos digitos do ano)
+export { shoppingListAdd }
