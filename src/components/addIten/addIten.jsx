@@ -4,7 +4,7 @@ import './addIten.scss'
 
 const AddIten = (id) => {
     const idList = id.id.id
-    
+
     return (
         <section className="form-add-itens" id='form'>
             <form className='form' method='post' onSubmit={cadastraIten}>

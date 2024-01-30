@@ -3,7 +3,6 @@ import { baseUrl, methodPost } from "../../services/services"
 
 function shoppingListAdd() {
     if (confirm("Quer criar a Lista?")) {
-        event.preventDefault()
         const hoje = new Date()
         const dia = hoje.getUTCDate().toString().padStart(2, '0')
         let mes = (hoje.getUTCMonth() + 1).toString().padStart(2, '0')
@@ -14,6 +13,7 @@ function shoppingListAdd() {
             "creation_date": creationDate
         }
         methodPost(url, body)
+        window.location.reload()
     } else {
         return 
     }

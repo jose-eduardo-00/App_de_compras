@@ -2,8 +2,13 @@ import { baseUrl, methodDelete } from "../../services/services"
 
 
 function deleteList(id) {
-    const url = `${baseUrl}list/${id}`
-    methodDelete(url)
+    if (confirm("Quer deletar a lista?")) {
+        const url = `${baseUrl}list/${id}`
+        methodDelete(url)
+        window.location.reload()
+    } else {
+        return
+    }
 }
 
 function setMounthName(listDate) {

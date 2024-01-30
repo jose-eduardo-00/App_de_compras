@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <main className="home">
             <SideMenu />
-            <ToDoList />
+            <ToDoList page={"home"} />
         </main>
     )
 }

@@ -4,12 +4,12 @@ import './buttonAdd.scss'
 
 const ButtonAdd = (e) => {
     const addShoppingList = e.event
-
-    function btnAdd() {
-        if(!e) {
-            addShoppingList()
-        } else {
+    
+    const btnAdd = () => {
+        if(!e.event) {
             formAddIten()
+        } else {
+            addShoppingList()
         }
     }
 

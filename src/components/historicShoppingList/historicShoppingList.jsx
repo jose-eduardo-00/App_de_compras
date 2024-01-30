@@ -1,20 +1,17 @@
-import { Link } from 'react-router-dom'
-import { getList } from '../../services/services'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
-import { deleteList, setMounthName } from './utils'
-import './shoppingList.scss'
+import { Link } from "react-router-dom"
+import { getHistoric } from "../../services/services"
+import { setMounthName } from "../shoppingList/utils"
+import './historicShoppingList.scss'
 
 
-const shoppingList = await getList()
+const historicList = await getHistoric()
 
-const ShoppingList = () => {
+const HistoricShoppingList = () => {
     return (
-        shoppingList.map((e, index) => {
+        historicList.map((e, index) => {
             const listDate = new Date(e.creation_date)
             const mes = setMounthName(listDate)
             const date = listDate.toLocaleDateString('pt-BR', { timeZone: 'UTC', });
-            
             return (
                 <section key={index} className="shopping-list">
                     <Link to={`/list/${e.id}`} className='link'>
@@ -23,11 +20,10 @@ const ShoppingList = () => {
                             <p>Data de criação: {date}</p>
                         </div>
                     </Link>
-                    <FontAwesomeIcon icon={faTrash} className='trash' onClick={() => deleteList(e.id)} />
                 </section>
             )
         })
     )
 }
 
-export { ShoppingList }
+export { HistoricShoppingList }

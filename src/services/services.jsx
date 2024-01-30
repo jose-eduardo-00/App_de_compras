@@ -7,6 +7,12 @@ async function getList() {
     return await resposta.json()
 }
 
+async function getHistoric() {
+    const url = `${baseUrl}historic`
+    const resposta = await fetch(url)
+    return await resposta.json()
+}
+
 async function getItens() {
     const url = `${baseUrl}itens`
     const resposta = await fetch(url)
@@ -27,4 +33,4 @@ function methodDelete(url) {
     request.send()
 }
 
-export { baseUrl, getList, getItens, methodPost, methodDelete }
+export { baseUrl, getList, getHistoric, getItens, methodPost, methodDelete }

@@ -13,22 +13,22 @@ function cadastraIten() {
     let name = document.getElementById("name").value
     let amount = document.getElementById("amount").value
     let price = document.getElementById("price").value
-
+    
     let body = {
         "list_id": list_id,
         "name": name,
         "amount": amount,
         "price": price
     }
-
+    
     methodPost(url, body)
     inputClear()
     closeAddIten()
+    window.location.reload()
 }
 
 
 function closeAddIten() {
-    event.preventDefault()
     const forms = document.getElementById('form')
     forms.style.display = 'none'
 }
