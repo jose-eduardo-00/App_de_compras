@@ -1,11 +1,11 @@
 import { useParams } from 'react-router-dom'
-import { ItemList } from '../../itemList/itemList'
-import { ButtonAdd } from '../../buttonAdd/buttonAdd'
-import './list.scss'
-import { AddIten } from '../../addIten/addIten'
+import { ItemList } from '../../components/itemList/itemList'
+import { ButtonAdd } from '../../components/buttonAdd/buttonAdd'
+import { AddIten } from '../../components/addIten/addIten'
 import { addTotalValue, setMounth } from './utils'
 import { useState } from 'react'
-import { getItens } from '../../../services/services'
+import { getItens } from '../../services/services'
+import './list.scss'
 
 
 const itensList = await getItens()

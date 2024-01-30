@@ -1,5 +1,5 @@
-import { SideMenu } from "../../sideMenu/sideMenu"
-import { ToDoList } from "../../toDoList/toDoList"
+import { SideMenu } from "../../components/sideMenu/sideMenu"
+import { ToDoList } from "../../components/toDoList/toDoList"
 import './historic.scss'
 
 

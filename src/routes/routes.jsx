@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { Home } from "../components/pages/home/home"
-import { Historic } from "../components/pages/historic/historic"
-import { List } from "../components/pages/list/list"
+import { Home } from "../pages/home/home"
+import { Historic } from "../pages/historic/historic"
+import { List } from "../pages/list/list"
 
 
 const AppRoutes = () => {
