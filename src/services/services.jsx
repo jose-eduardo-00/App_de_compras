@@ -19,6 +19,12 @@ async function getItens() {
     return await resposta.json()
 }
 
+async function getHistoricItens() {
+    const url = `${baseUrl}historic_itens`
+    const resposta = await fetch(url)
+    return await resposta.json()
+}
+
 function methodPost(url, body) {
     let request = new XMLHttpRequest()
     request.open("POST", url, true)
@@ -33,4 +39,4 @@ function methodDelete(url) {
     request.send()
 }
 
-export { baseUrl, getList, getHistoric, getItens, methodPost, methodDelete }
+export { baseUrl, getList, getHistoric, getItens, getHistoricItens, methodPost, methodDelete }

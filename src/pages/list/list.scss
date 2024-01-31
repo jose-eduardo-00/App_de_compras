@@ -18,6 +18,18 @@
             justify-content: center;
             min-height: 8vh;
             margin-bottom: 20px;
+            position: relative;
+
+            .back-page {
+                position: absolute;
+                top: 15px;
+                left: 10px;
+                background-color: #eeeeee;
+                padding: 6px 12px;
+                border-radius: 10px;
+                font-weight: 800;
+                font-size: 18px;
+            }
 
             h1 {
                 color: #eeeeee;

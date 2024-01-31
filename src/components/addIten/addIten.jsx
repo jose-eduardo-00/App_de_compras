@@ -15,15 +15,15 @@ const AddIten = (id) => {
                 </div>
                 <div className='div-input'>
                     <label htmlFor="name" className='label'>Nome</label>
-                    <input type="text" name='name' id='name' />
+                    <input type="text" name='name' id='name' required />
                 </div>
                 <div className='div-input'>
                     <label htmlFor="amount" className='label'>Quantidade</label>
-                    <input type="number" name='amount' id='amount' />
+                    <input type="number" name='amount' id='amount' required />
                 </div>
                 <div className='div-input'>
                     <label htmlFor="price" className='label'>Preço</label>
-                    <input type="number" step={0.01} name='price' id='price' />
+                    <input type="number" step={0.01} name='price' id='price' required />
                 </div>
                 <button type='submit' className='btn-submit'>Enviar</button>
             </form>
