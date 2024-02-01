@@ -2,12 +2,16 @@ import { SideMenu } from "../../components/sideMenu/sideMenu"
 import { ToDoList } from "../../components/toDoList/toDoList"
 import './historic.scss'
 
-// criar a todolist do historico, criar passando o tipo como props, por exemplo <ToDoList page={historico} />
 
 const Historic = () => {
+
+    const historicSelect = {
+        historicMenu: { borderColor: "#eeeeee" }
+    }
+
     return (
         <main className="historic">
-            <SideMenu />
+            <SideMenu color={historicSelect} />
             <ToDoList page={"historic"} />
         </main>
     )
