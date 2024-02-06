@@ -1,7 +1,6 @@
 .sideMenu {
-    position: static;
     z-index: 10;
-    width: 15vw;
+    min-width: 16vw;
     min-height: 100vh;
     color: #fff;
     box-shadow: 4px 0px 6px 0px rgba(0,0,0,0.75);
@@ -21,5 +20,12 @@
                 cursor: pointer;
             }
         }
+    }
+}
+
+@media (max-width: 700px) {
+    .sideMenu {
+        width: 100vw;
+        min-height: 15vh;
     }
 }

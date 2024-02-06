@@ -5,7 +5,9 @@ function deleteList(id) {
     if (confirm("Quer deletar a lista?")) {
         const url = `${baseUrl}list/${id}`
         methodDelete(url)
-        window.location.reload()
+        setTimeout(() => {
+            window.location.reload()
+        }, 3000);
     } else {
         return
     }

@@ -19,9 +19,9 @@ const List = () => {
             <section className='list'>
                 <div className='div-list'>
                     <header className="header-list">
-                        <Link to={'/'} className='back-page'>Voltar</Link>
                         <h1>Lista de Compras</h1>
                     </header>
+                        <Link to={'/App_de_compras'} className='back-page'>Voltar</Link>
                     <div className='div-item-list'>
                         <ItemList id={id} />
                         <div className='add'>

@@ -1,5 +1,6 @@
 import { baseUrl, methodPost } from "../../services/services"
 
+// fazer funcionar essa função de adicionar lista
 
 function shoppingListAdd() {
     if (confirm("Quer criar a Lista?")) {
@@ -13,9 +14,11 @@ function shoppingListAdd() {
             "creation_date": creationDate
         }
         methodPost(url, body)
-        window.location.reload()
+        setTimeout(() => {
+            window.location.reload()
+        }, 3000);
     } else {
-        return 
+        return
     }
 }
 

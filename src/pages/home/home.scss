@@ -1,4 +1,11 @@
 .home {
     display: flex;
+    align-items: center;
     background-color: #260485;
+}
+
+@media (max-width: 700px) {
+        .home {
+            flex-direction: column;
+    }
 }

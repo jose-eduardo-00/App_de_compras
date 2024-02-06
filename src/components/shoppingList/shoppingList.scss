@@ -1,5 +1,5 @@
 .shopping-list {
-    width: 100%;
+    width: 98%;
     margin-bottom: 20px;
     background-color: #eeeeee;
     display: flex;
@@ -7,6 +7,7 @@
     align-items: center;
     font-family: 'PoppinsBold', sans-serif;
     box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.6);
+    border-radius: 10px;
 
     .link {
         width: 100%;
@@ -17,13 +18,49 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            h1 {
+                font-size: 22px;
+            }
         }
     }
 
     .trash {
-        margin-right: 20px;
-        margin-top: -5px;
+        margin: -5px 20px 0 0;
         color: #ff0000;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 700px) {
+    .shopping-list {
+        flex-direction: column;
+
+        .link {
+
+            .infos{
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .trash {
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .shopping-list {
+
+        .link {
+            
+            .infos {
+
+                h1 {
+                    font-size: 20px;
+                }
+            }
+        }
     }
 }
