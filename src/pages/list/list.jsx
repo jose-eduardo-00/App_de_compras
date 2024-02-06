@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getItens } from '../../services/services'
 import { ItemList } from '../../components/itemList/itemList'
 import { ButtonAdd } from '../../components/buttonAdd/buttonAdd'
@@ -8,11 +8,18 @@ import { addTotalValue } from './utils'
 import './list.scss'
 
 
-const itensList = await getItens()
-
 const List = () => {
     const id = useParams()
+    const [itensList, setItensList] = useState([])
     const [valorTotal] = useState(addTotalValue(id, itensList))
+
+    useEffect(() => {
+        const set = async () => {
+            setItensList(await getItens())
+        }
+        set()
+    }, [])
+
 
     if (!id.historic) {
         return (

@@ -4,17 +4,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { deleteList, setMounthName } from './utils'
 import './shoppingList.scss'
+import { useEffect, useState } from 'react'
 
 
-const shoppingList = await getList()
+// const shoppingList = await getList()
 
 const ShoppingList = () => {
+
+    const [shoppingList, setShoppingList] = useState([])
+
+    useEffect(() => {
+        const set = async () => {
+            setShoppingList(await getList())
+        }
+        set()
+    }, [])
+
     return (
         shoppingList.map((e, index) => {
             const listDate = new Date(e.creation_date)
             const mes = setMounthName(listDate)
             const date = listDate.toLocaleDateString('pt-BR', { timeZone: 'UTC', });
-            
+
             return (
                 <section key={index} className="shopping-list">
                     <Link to={`/list/${e.id}`} className='link'>

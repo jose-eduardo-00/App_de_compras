@@ -3,13 +3,22 @@ import './itemList.scss'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { getHistoricItens, getItens } from '../../services/services'
 import { deleteIten } from './utils'
+import { useEffect, useState } from 'react'
 
-
-const itensList = await getItens()
-const historicItens = await getHistoricItens()
 
 const ItemList = (id) => {
     const idList = id.id.id
+
+    const [itensList, setItensList] = useState([])
+    const [historicItens, setHistoricItens] = useState([])
+
+    useEffect(() => {
+        const set = async () => {
+            setItensList(await getItens())
+            setHistoricItens(await getHistoricItens())
+        }
+        set()
+    }, [])
 
     if (!id.id.historic) {
         return (

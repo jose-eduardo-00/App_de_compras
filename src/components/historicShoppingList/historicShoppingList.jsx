@@ -2,11 +2,20 @@ import { Link } from "react-router-dom"
 import { getHistoric } from "../../services/services"
 import { setMounthName } from "../shoppingList/utils"
 import './historicShoppingList.scss'
+import { useEffect, useState } from "react"
 
-
-const historicList = await getHistoric()
 
 const HistoricShoppingList = () => {
+
+    const [historicList, setHistoricList] = useState([])
+    
+    useEffect(() => {
+        const set = async () => {
+            setHistoricList(await getHistoric())
+        }
+        set()
+    }, [])
+
     return (
         historicList.map((e, index) => {
             const listDate = new Date(e.creation_date)
