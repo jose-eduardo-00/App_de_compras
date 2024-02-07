@@ -23,7 +23,7 @@ const HistoricShoppingList = () => {
             const date = listDate.toLocaleDateString('pt-BR', { timeZone: 'UTC', });
             return (
                 <section key={index} className="shopping-list">
-                    <Link to={`/historic/${e.id}`} className='link'>
+                    <Link to={`/App_de_compras/historic/${e.id}`} className='link'>
                         <div className='infos'>
                             <h1>Compras de {mes}</h1>
                             <p>Data de criação: {date}</p>

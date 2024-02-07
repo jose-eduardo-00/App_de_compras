@@ -15,7 +15,7 @@ const SideMenu = (color) => {
                         </button>
                     </li>
                 </Link>
-                <Link to={'/historic'}>
+                <Link to={'/App_de_compras/historic'}>
                     <li>
                         <button className='btn' style={!menu.homeMenu ? menu.historicMenu : {borderColor: "transparent"}}>
                             Histórico

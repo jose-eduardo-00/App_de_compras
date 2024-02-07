@@ -11,7 +11,7 @@ import './list.scss'
 const List = () => {
     const id = useParams()
     const [itensList, setItensList] = useState([])
-    const [valorTotal] = useState(addTotalValue(id, itensList))
+    const [valorTotal, setValorTotal] = useState(addTotalValue(id, itensList))
 
     useEffect(() => {
         const set = async () => {
@@ -19,6 +19,10 @@ const List = () => {
         }
         set()
     }, [])
+
+    useEffect(() => {
+        setValorTotal(addTotalValue(id, itensList))
+    }, [id, itensList])
 
 
     if (!id.historic) {
@@ -28,7 +32,7 @@ const List = () => {
                     <header className="header-list">
                         <h1>Lista de Compras</h1>
                     </header>
-                        <Link to={'/App_de_compras'} className='back-page'>Voltar</Link>
+                    <Link to={'/App_de_compras'} className='back-page'>Voltar</Link>
                     <div className='div-item-list'>
                         <ItemList id={id} />
                         <div className='add'>
@@ -47,9 +51,9 @@ const List = () => {
             <section className='list'>
                 <div className='div-list'>
                     <header className="header-list">
-                        <Link to={'/historic'} className='back-page'>Voltar</Link>
                         <h1>Lista de Compras Histórico</h1>
                     </header>
+                    <Link to={'/App_de_compras/historic'} className='back-page'>Voltar</Link>
                     <div className='div-item-list'>
                         <ItemList id={id} />
                     </div>

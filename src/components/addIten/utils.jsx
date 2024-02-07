@@ -24,7 +24,9 @@ function cadastraIten() {
     methodPost(url, body)
     inputClear()
     closeAddIten()
-    window.location.reload()
+    setTimeout(() => {
+        window.location.reload()
+    }, 8000)
 }
 
 

@@ -5,7 +5,9 @@ function deleteIten(id) {
     if (confirm("Quer deletar esse iten?")) {
         const url = `${baseUrl}itens/${id}`
         methodDelete(url)
-        window.location.reload()
+        setTimeout(() => {
+            window.location.reload()
+        }, 8000)
     } else {
         return
     }

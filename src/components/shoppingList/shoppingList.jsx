@@ -7,8 +7,6 @@ import './shoppingList.scss'
 import { useEffect, useState } from 'react'
 
 
-// const shoppingList = await getList()
-
 const ShoppingList = () => {
 
     const [shoppingList, setShoppingList] = useState([])
@@ -28,7 +26,7 @@ const ShoppingList = () => {
 
             return (
                 <section key={index} className="shopping-list">
-                    <Link to={`/list/${e.id}`} className='link'>
+                    <Link to={`/App_de_compras/list/${e.id}`} className='link'>
                         <div className='infos'>
                             <h1>Compras de {mes}</h1>
                             <p>Data de criação: {date}</p>

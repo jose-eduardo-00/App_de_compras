@@ -9,9 +9,9 @@ const AppRoutes = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/App_de_compras" element={<Home />} />
-                <Route path="/historic" element={<Historic />} />
-                <Route path="/list/:id" element={<List />} />
-                <Route path="/:historic/:id" element={<List />} />
+                <Route path="/App_de_compras/historic" element={<Historic />} />
+                <Route path="/App_de_compras/list/:id" element={<List />} />
+                <Route path="/App_de_compras/:historic/:id" element={<List />} />
             </Routes>
         </BrowserRouter>
     )
