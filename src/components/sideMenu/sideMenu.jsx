@@ -8,7 +8,7 @@ const SideMenu = (color) => {
     return (
         <aside className='sideMenu'>
             <ul className='options'>
-                <Link to='/'>
+                <Link to='/App_de_compras'>
                     <li>
                         <button className='btn' style={!menu.historicMenu ? menu.homeMenu : {borderColor: "transparent"} }>
                             Listas
