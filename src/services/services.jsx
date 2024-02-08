@@ -1,5 +1,4 @@
-// const baseUrl = "https://app-compras-api.onrender.com/"
-const baseUrl = "http://localhost:3000/"
+const baseUrl = "https://app-compras-api.onrender.com/"
 
 
 async function getList() {
