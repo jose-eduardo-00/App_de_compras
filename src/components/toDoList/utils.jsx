@@ -13,9 +13,6 @@ function shoppingListAdd() {
             "creation_date": creationDate
         }
         methodPost(url, body)
-        setTimeout(() => {
-            window.location.reload()
-        }, 8000);
     } else {
         return
     }

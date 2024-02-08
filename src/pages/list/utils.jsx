@@ -2,10 +2,10 @@
 function addTotalValue(id, itensList) {
     let sum = 0
 
-    itensList.map(e => { 
+    itensList.map(e => {
         if (e.list_id === Number(id.id)) {
             sum += (Number(e.price) * e.amount)
-            return sum 
+            return sum
         } else {
             return 0
         }

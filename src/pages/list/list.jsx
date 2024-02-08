@@ -12,7 +12,7 @@ const List = () => {
     const id = useParams()
     const [itensList, setItensList] = useState([])
     const [valorTotal, setValorTotal] = useState(addTotalValue(id, itensList))
-
+    
     useEffect(() => {
         const set = async () => {
             setItensList(await getItens())
