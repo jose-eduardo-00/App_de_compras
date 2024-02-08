@@ -23,7 +23,6 @@ function cadastraIten() {
     
     methodPost(url, body)
     inputClear()
-    closeAddIten()
 }
 
 

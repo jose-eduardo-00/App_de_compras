@@ -36,19 +36,20 @@
             margin-bottom: 15px;
         }
 
+        .add {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
         .div-item-list {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
-            .add {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-            }
+            margin-bottom: 30px;
         }
     }
 

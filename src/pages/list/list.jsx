@@ -12,7 +12,7 @@ const List = () => {
     const id = useParams()
     const [itensList, setItensList] = useState([])
     const [valorTotal, setValorTotal] = useState(addTotalValue(id, itensList))
-    
+
     useEffect(() => {
         const set = async () => {
             setItensList(await getItens())
@@ -33,11 +33,11 @@ const List = () => {
                         <h1>Lista de Compras</h1>
                     </header>
                     <Link to={'/App_de_compras'} className='back-page'>Voltar</Link>
+                    <div className='add'>
+                        <ButtonAdd />
+                    </div>
                     <div className='div-item-list'>
                         <ItemList id={id} />
-                        <div className='add'>
-                            <ButtonAdd />
-                        </div>
                     </div>
                 </div>
                 <AddIten id={id} />
